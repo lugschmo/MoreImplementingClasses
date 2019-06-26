@@ -19,7 +19,7 @@ def main():
     run_test_simple_t()
     run_test_set_colors()
     run_test_move_by()
-    # run_test_clone()
+    run_test_clone()
 
 
 def run_test_simple_t():
@@ -268,12 +268,21 @@ class CapitalT(object):
           :rtype: CapitalT
         """
         # --------------------------------------------------------------
-        # TODO: 7.
+        # DONE: 7.
         #   READ the above specification, including the Example.
         #   Implement and test this method by uncommenting the appropriate
         #     run_test method in main. Compare the graphics window to
         #     clone.pdf.
         # --------------------------------------------------------------
+        intersection_center = self.h_rect.get_center()
+        width = self.h_rect.get_width()
+        height = self.v_rect.get_height()
+        thickness = self.h_rect.get_height()
+        fill_color = self.h_rect.fill_color
+        outline_color = self.h_rect.outline_color
+        new_t = CapitalT(intersection_center, width, height, thickness)
+        new_t.set_colors(fill_color, outline_color)
+        return new_t
 
 
 # ----------------------------------------------------------------------
