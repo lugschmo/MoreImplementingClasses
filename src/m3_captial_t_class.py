@@ -18,7 +18,7 @@ def main():
 
     run_test_simple_t()
     run_test_set_colors()
-    # run_test_move_by()
+    run_test_move_by()
     # run_test_clone()
 
 
@@ -231,13 +231,22 @@ class CapitalT(object):
           :type dy: int
         """
         # --------------------------------------------------------------
-        # TODO: 6.
+        # DONE: 6.
         #   READ the above specification, including the Example.
         #   Implement and test this method by uncommenting the appropriate
         #     run_test method in main. Compare the graphics window to
         #     move_by.pdf. Note: the pdf shows the different locations
         #     that the T moves through, but there is only 1 T at any moment.
         # --------------------------------------------------------------
+        self.h_rect.corner_1.x = self.h_rect.corner_1.x + dx
+        self.h_rect.corner_1.y = self.h_rect.corner_1.y + dy
+        self.h_rect.corner_2.x = self.h_rect.corner_2.x + dx
+        self.h_rect.corner_2.y = self.h_rect.corner_2.y + dy
+        self.v_rect.corner_1.x = self.v_rect.corner_1.x + dx
+        self.v_rect.corner_1.y = self.v_rect.corner_1.y + dy
+        self.v_rect.corner_2.x = self.v_rect.corner_2.x + dx
+        self.v_rect.corner_2.y = self.v_rect.corner_2.y + dy
+
 
     def clone(self):
         """
